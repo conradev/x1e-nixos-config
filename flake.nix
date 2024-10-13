@@ -10,7 +10,7 @@
       # Modify this of you want to attempt using a different device.
       # See the `arch/arm64/boot/dts/qcom` directory in the Linux
       # kernel source tree for available device trees.
-      deviceTreeName = "qcom/x1e80100-lenovo-yoga-slim7x.dtb";
+      deviceTreeName = "qcom/x1e80100-samsung-galaxy-book4-edge.dtb";
 
       nixpkgs-patched =
         let pkgs-unpatched = nixpkgs.legacyPackages.${buildSystem}; in (pkgs-unpatched.applyPatches {

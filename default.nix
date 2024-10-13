@@ -20,7 +20,7 @@
         })
       ];
 
-      hardware.deviceTree.name = lib.mkDefault "qcom/x1e80100-lenovo-yoga-slim7x.dtb";
+      hardware.deviceTree.name = lib.mkDefault "qcom/x1e80100-samsung-galaxy-book4-edge.dtb";
     };
   };
 }
