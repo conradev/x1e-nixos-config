@@ -5,7 +5,7 @@
   outputs = { self, nixpkgs }:
     let
       # Modify this if you are building on something other than x86_64-linux.
-      buildSystem = "x86_64-linux";
+      buildSystem = "aarch64-linux";
 
       # Modify this of you want to attempt using a different device.
       # See the `arch/arm64/boot/dts/qcom` directory in the Linux
@@ -54,10 +54,6 @@
             ({ lib, ... }: {
               nixpkgs.pkgs = nixpkgs.legacyPackages.aarch64-linux;
               hardware.deviceTree.name = deviceTreeName;
-
-              # Copy the cross-compiled kernel from the install ISO. Remove
-              # this if you want to natively compile the kernel on your device.
-              boot.kernelPackages = lib.mkForce pkgs-cross.x1e80100-linux;
             })
           ];
         };
